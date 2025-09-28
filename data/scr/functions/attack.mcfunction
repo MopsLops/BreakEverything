@@ -1,0 +1,1 @@
+execute at @s[tag=air_sword] run function scr:items/air/air_sword

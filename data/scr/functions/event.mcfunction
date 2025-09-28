@@ -1,1 +1,1 @@
-execute at @s[nbt={SelectedItem:{id:"minecraft:netherite_hoe"}}] run say "Вы кликнули мотыгой ПКМ"
+execute at @s[tag=air_amulet,tag=!cooldown] run function scr:items/air/air_amulet
