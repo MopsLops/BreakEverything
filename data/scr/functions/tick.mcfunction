@@ -66,5 +66,27 @@ execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]},tag=water_
 execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]}] run particle minecraft:underwater ~ ~1 ~ 1 1 1 0 10 force @a
 
 
+#БЕДРОКОВЫЕ ПРЕДМЕТЫ:
+#Бесконечный блок бедрока - потом сделаю что бы он был зачарованный
+execute as @a[nbt={SelectedItem:{id:"minecraft:bedrock",tag:{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'}}}}] run tag @s add infinite_bedrock
+execute as @a[tag=infinite_bedrock,scores={used_bedrock=1..}] at @s run item replace entity @s weapon.mainhand with air
+execute as @a[tag=infinite_bedrock,scores={used_bedrock=1..}] at @s run item replace entity @s weapon.mainhand with minecraft:bedrock{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'}}
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:bedrock",tag:{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'}}}}] run tag @s remove infinite_bedrock
+scoreboard players reset @a[scores={used_bedrock=1..}] used_bedrock
+
+#Амулет
+#Я тут намудрил если что передалаю потом нормально
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=!bedrock_amulet] at @s run tag @s add bedrock_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet] at @s run tag @s remove bedrock_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet,scores={fall=20..}] at @s if block ~ ~-1 ~ air run tag @s add falling
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet] at @s[nbt={OnGround:0b}] run scoreboard players add @s fall 1
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet,scores={fall=20..}] at @s run scale set pehkui:falling 0 @s
+execute as @a[nbt={OnGround:1b}] at @s run execute at @s run scale set pehkui:falling 1 @s
+execute as @a[tag=falling,nbt={OnGround:0b}] run function scr:items/bedrock/bedrock_amulet
+execute as @a[nbt={OnGround:1b}] run scoreboard players set @s fall 0
+#
+execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]}] run particle minecraft:ash ~ ~1 ~ 1 1 1 0 10 force @a
+
+
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0
 execute as @a[scores={click=1..}] at @s run scoreboard players set @s click 0

@@ -13,6 +13,10 @@ gamerule doWeatherCycle false
 #Убрать(добавил что бы постоянно не прописывать)
 function scr:bind
 
+scoreboard objectives add used_bedrock used:bedrock
+
 scoreboard objectives add hurted minecraft.custom:minecraft.damage_taken
+
+scoreboard objectives add fall dummy
 
 scoreboard objectives add heal trigger
