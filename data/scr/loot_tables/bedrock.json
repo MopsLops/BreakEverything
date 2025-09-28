@@ -1,0 +1,58 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "name": "minecraft:chainmail_chestplate",
+            "functions": [
+              {
+                "function": "set_nbt",
+                "tag": "{CustomModelData:1,Unbreakable:1b,HideFlags:6}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "name":{
+                  "text": "Бедроковый нагрудник",
+                  "color": "light_purple",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {"text": "Очень прочная броня!","italic": false}
+                ]
+              },
+              {
+                "function": "set_attributes",
+                "modifiers": [
+                  {
+                    "name": "generic.armor",
+                    "attribute": "generic.armor",
+                    "amount": 2000.0,
+                    "slot": "chest",
+                    "operation": "addition"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 50,
+            "name": "minecraft:bedrock",
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

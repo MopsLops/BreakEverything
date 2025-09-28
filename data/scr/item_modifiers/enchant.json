@@ -1,0 +1,626 @@
+[
+  {
+    "function":"minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:swift_sneak": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:aqua_affinity" : {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:bane_of_arthropods": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:binding_curse": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:blast_protection": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:channeling": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:depth_strider": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:efficiency": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:feather_falling": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:fire_aspect": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:fire_protection": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:flame": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:fortune": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:frost_walker": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:impaling": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:infinity": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:knockback": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:looting": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:loyalty": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:luck_of_the_sea": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:lure": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:mending": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:multishot": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:piercing": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:power": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:projectile_protection": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:protection": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:punch": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:quick_charge": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:respiration": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:riptide": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:sharpness": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:silk_touch": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:smite": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:soul_speed": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:sweeping": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:thorns": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:unbreaking": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:vanishing_curse": {
+        "min": 1,
+        "max": 10
+      }
+    },
+    "add": true,
+    "conditions": [
+      {
+        "condition": "minecraft:random_chance",
+        "chance": 0.018
+      }
+    ]
+  }
+]

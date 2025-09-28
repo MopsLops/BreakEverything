@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 10,
+            "name": "minecraft:wooden_axe",
+            "functions": [
+              {
+                "function": "set_nbt",
+                "tag": "{CustomModelData:1}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "name":{
+                  "text": "Земляной топор",
+                  "color": "green",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {"text": "Какой-то странный топор..","italic": false}
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 90,
+            "name": "minecraft:dirt",
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

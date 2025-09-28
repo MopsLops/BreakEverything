@@ -1,0 +1,50 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 50,
+            "name": "minecraft:string",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 1,
+                  "max": 4
+                }
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 4,
+            "name": "minecraft:feather",
+            "functions": [
+              {
+                "function": "set_name",
+                "name":{
+                  "text": "Магическое перо",
+                  "color": "yellow",
+                  "italic": false
+                }
+              },
+              {
+                "function": "set_lore",
+                "lore": [
+                  {
+                    "text": "Пока в инвентаре - позволяет летать!",
+                    "italic": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+        
+      }
+    ]
+  }
+  

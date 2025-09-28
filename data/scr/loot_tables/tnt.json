@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 100,
+            "name": "minecraft:carrot_on_a_stick",
+            "functions": [
+              {
+                "function": "set_nbt",
+                "tag": "{CustomModelData:1}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "name":{
+                  "text": "Динамитовая пушка",
+                  "color": "red",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {"text": "Стреляет взрывчатыми снарядами!","italic": false}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

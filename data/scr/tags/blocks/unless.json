@@ -1,0 +1,14 @@
+{
+    "values": [
+        "#scr:air",
+        "#scr:fluid",
+        "vine",
+        "cave_vines",
+        "cave_vines_plant",
+        "weeping_vines",
+        "weeping_vines_plant",
+        "twisting_vines",
+        "twisting_vines_plant",
+        "#scr:flower"
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 4,
+            "name": "minecraft:netherite_pickaxe",
+            "functions": [
+              {
+                "function": "set_nbt",
+                "tag": "{CustomModelData:1}"
+              },
+              {
+                "function": "minecraft:set_name",
+                "name":{
+                  "text": "Обсидиановая кирка",
+                  "color": "light_purple",
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "lore": [
+                  {"text": "Могущественная кирка!","italic": false}
+                ]
+              },
+              {
+                "function": "set_enchantments",
+                "enchantments": {"fortune":3,"efficiency":30}
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 40,
+            "name": "minecraft:obsidian",
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

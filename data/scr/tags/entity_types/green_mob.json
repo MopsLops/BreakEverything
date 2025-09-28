@@ -1,0 +1,21 @@
+{
+    "values": [
+        "cave_spider",
+        "creeper",
+        "drowned",
+        "zombie",
+        "glow_squid",
+        "guardian",
+        "iron_golem",
+        "phantom",
+        "salmon",
+        "slime",
+        "villager",
+        "witch",
+        "zombie_horse",
+        "zombie_villager",
+        "zombified_piglin",
+        "wither"
+
+    ]
+}

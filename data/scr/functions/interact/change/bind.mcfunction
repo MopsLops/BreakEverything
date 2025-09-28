@@ -1,0 +1,1 @@
+executeclient @a bind "/execute at @s run function scr:interact/interact_action/raycast_start" mouse.right SingleUse

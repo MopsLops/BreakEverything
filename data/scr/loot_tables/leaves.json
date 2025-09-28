@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 50,
+            "name": "minecraft:apple"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 50,
+            "name": "minecraft:stick"  
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
