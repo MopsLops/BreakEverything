@@ -1,3 +1,6 @@
+#Сделал отдельную функцию под эффекты я незнаю почему они не хотят работать :/ если я вызываю функцию в чате то всё работае
+function scr:effects_tick
+
 #ВВОЗДУШНЫЕ ВЕЩИ:
 #Меч - сделал через attack.mcfunction
 execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:4}}}] at @s run tag @s add air_sword
@@ -13,6 +16,7 @@ execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:pink_dye"}]},tag=air_am
 #Эффекты вокруг игрока, если тот держит амулет
 execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:pink_dye"}]}] run particle minecraft:cloud ~ ~1 ~ 1 1 1 0 1 force @a
 #Звуки применения добавлю позже
+
 
 #ЛАВОВЫЕ ВЕЩИ:
 #Меч
@@ -42,14 +46,24 @@ execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=lava
 #Если игрок получает урон от ближайшего к нему моба
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=lava_amulet,scores={hurted=1..}] at @s run function scr:items/lava/lava_amulet
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=lava_amulet] at @s run scoreboard players set @s[tag=lava_amulet] hurted 0
-#Эффекты вокруг игрока, если тот держит амулет
-
-#Почему-то не хочет работать:
-execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] at @s run effect give @s fire_resistance 2 0 true
-execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] at @s run effect clear fire_resistance
-##############
 #Партиклы
 execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @a
+
+
+#ВОДЯНЫЕ ПРЕДМЕТЫ:
+#Мотыга
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{CustomModelData:1}}}] at @s run tag @s add water_hoe
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_hoe",tag:{CustomModelData:1}}}] at @s run tag @s remove water_hoe
+
+#Лопата
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_shovel",tag:{CustomModelData:1}}}] at @s run tag @s add water_shovel
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_shovel",tag:{CustomModelData:1}}}] at @s run tag @s remove water_shovel
+
+#Амулет
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]},tag=!water_amulet] at @s run tag @s add water_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]},tag=water_amulet] at @s run tag @s remove water_amulet
+#Партиклы
+execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]}] run particle minecraft:underwater ~ ~1 ~ 1 1 1 0 10 force @a
 
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0
