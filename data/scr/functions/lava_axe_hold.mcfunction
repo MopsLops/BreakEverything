@@ -1,0 +1,1 @@
+# execute at @s[tag=lava_axe] run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @a

@@ -10,4 +10,9 @@ scoreboard objectives add dist dummy
 gamerule keepInventory true
 gamerule doWeatherCycle false
 
+#Убрать(добавил что бы постоянно не прописывать)
+function scr:bind
+
+scoreboard objectives add hurted minecraft.custom:minecraft.damage_taken
+
 scoreboard objectives add heal trigger

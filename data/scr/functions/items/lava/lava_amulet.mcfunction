@@ -1,0 +1,1 @@
+execute as @e[type=!player,distance=..3] at @s run data merge entity @s {Fire:200s,Health:1.0f}
