@@ -14,7 +14,7 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomMode
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:pink_dye"}]},tag=!air_amulet] at @s run tag @s add air_amulet
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:pink_dye"}]},tag=air_amulet] at @s run tag @s remove air_amulet
 #Эффекты вокруг игрока, если тот держит амулет
-execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:pink_dye"}]}] run particle minecraft:cloud ~ ~1 ~ 1 1 1 0 1 force @a
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:pink_dye"}]}] run particle minecraft:cloud ~ ~1 ~ 1 1 1 0 1 force @a
 #Звуки применения добавлю позже
 
 
@@ -47,7 +47,7 @@ execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]},tag=lava_am
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]},tag=lava_amulet,scores={hurted=1..}] at @s run function scr:items/lava/lava_amulet
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]},tag=lava_amulet] at @s run scoreboard players set @s[tag=lava_amulet] hurted 0
 #Партиклы
-execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]}] run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @a
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]}] run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @a
 
 
 #ВОДЯНЫЕ ПРЕДМЕТЫ:
@@ -63,7 +63,7 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_shovel",tag:{CustomModel
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]},tag=!water_amulet] at @s run tag @s add water_amulet
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]},tag=water_amulet] at @s run tag @s remove water_amulet
 #Партиклы
-execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]}] run particle minecraft:underwater ~ ~1 ~ 1 1 1 0 10 force @a
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]}] run particle minecraft:underwater ~ ~1 ~ 1 1 1 0 10 force @a
 
 
 #БЕДРОКОВЫЕ ПРЕДМЕТЫ:
@@ -84,8 +84,8 @@ execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedroc
 execute as @a[nbt={OnGround:1b}] at @s run execute at @s run scale set pehkui:falling 1 @s
 execute as @a[tag=falling,nbt={OnGround:0b}] run function scr:items/bedrock/bedrock_amulet
 execute as @a[nbt={OnGround:1b}] run scoreboard players set @s fall 0
-#
-execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]}] run particle minecraft:ash ~ ~1 ~ 1 1 1 0 10 force @a
+#Партиклы
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]}] run particle minecraft:ash ~ ~1 ~ 1 1 1 0 10 force @a
 
 
 #АДСКИЕ ПРЕДМЕТЫ:
@@ -102,10 +102,30 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModel
 #Амулет
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=!nether_amulet] at @s run tag @s add nether_amulet
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=nether_amulet] at @s run tag @s remove nether_amulet
+#Партиклы
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] run particle minecraft:soul_fire_flame ~ ~1 ~ 1 1 1 0 1 force @a
+
+
+#ЭНДЕРСКИЕ ПРЕДМЕТЫ:
+#Посох
+execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run tag @s add ender_staff
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:green_dye"}}] at @s run tag @s remove ender_staff
+
+#Артефакт
+execute as @a[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run tag @s add ender_artifact
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run tag @s remove ender_artifact
+
+#Амулет
+execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s add ender_amulet
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s remove ender_amulet
 
 #Партиклы
-execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] run particle minecraft:soul_fire_flame ~ ~1 ~ 1 1 1 0 1 force @a
-
+execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run particle block minecraft:end_stone ~ ~1 ~ 1 1 1 0 10 force @a
+#Эндермены не агрятся если игрок держит предметы
+execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run team join enders
+execute as @a[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run team join enders
+execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run team join enders
+execute as @a unless entity @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] run team leave @s
 
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0

@@ -20,3 +20,6 @@ scoreboard objectives add hurted minecraft.custom:minecraft.damage_taken
 scoreboard objectives add fall dummy
 
 scoreboard objectives add heal trigger
+
+team add enders
+team modify enders friendlyFire false
