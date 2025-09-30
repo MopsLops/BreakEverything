@@ -11,3 +11,6 @@ execute at @s[tag=ender_staff,tag=!cooldown] run function scr:items/end/staff/en
 execute at @s[tag=ender_artifact,tag=!cooldown] run function scr:items/end/ender_artifact
 
 execute at @s[tag=ender_amulet,tag=!cooldown] run function scr:items/end/amulet/ender_amulet_r
+
+execute at @s[tag=cloud_amulet,tag=!cooldown,scores={freeze=0}] run function scr:items/cloud/amulet/cloud_amulet
+execute at @s[tag=cloud_amulet,tag=!cooldown,scores={freeze=1}] run function scr:items/cloud/amulet/cloud_amulet_unfreeze
