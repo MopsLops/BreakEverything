@@ -41,13 +41,13 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_axe",tag:{CustomModelData
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_axe",tag:{CustomModelData:1}}},tag=lava_axe] at @s run tag @s remove lava_axe
 
 #Амулет
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=!lava_amulet] at @s run tag @s add lava_amulet
-execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=lava_amulet] at @s run tag @s remove lava_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]},tag=!lava_amulet] at @s run tag @s add lava_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]},tag=lava_amulet] at @s run tag @s remove lava_amulet
 #Если игрок получает урон от ближайшего к нему моба
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=lava_amulet,scores={hurted=1..}] at @s run function scr:items/lava/lava_amulet
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=lava_amulet] at @s run scoreboard players set @s[tag=lava_amulet] hurted 0
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]},tag=lava_amulet,scores={hurted=1..}] at @s run function scr:items/lava/lava_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]},tag=lava_amulet] at @s run scoreboard players set @s[tag=lava_amulet] hurted 0
 #Партиклы
-execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @a
+execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:red_dye"}]}] run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @a
 
 
 #ВОДЯНЫЕ ПРЕДМЕТЫ:
@@ -86,6 +86,26 @@ execute as @a[tag=falling,nbt={OnGround:0b}] run function scr:items/bedrock/bedr
 execute as @a[nbt={OnGround:1b}] run scoreboard players set @s fall 0
 #
 execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]}] run particle minecraft:ash ~ ~1 ~ 1 1 1 0 10 force @a
+
+
+#АДСКИЕ ПРЕДМЕТЫ:
+#Меч
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:3}}}] at @s run tag @s add nether_sword
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:3}}}] at @s run tag @s remove nether_sword
+
+#Кирка
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:2}}}] at @s run tag @s add nether_pickaxe
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:2}}}] at @s run tag @s remove nether_pickaxe
+#Если положить предмет в левую руку пока игрок держит кирку то он переплавляется:
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:2}}}] run item modify entity @s weapon.offhand scr:furnace
+
+#Амулет
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=!nether_amulet] at @s run tag @s add nether_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=nether_amulet] at @s run tag @s remove nether_amulet
+
+#Партиклы
+execute at @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] run particle minecraft:soul_fire_flame ~ ~1 ~ 1 1 1 0 1 force @a
+
 
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0

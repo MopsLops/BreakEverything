@@ -1,5 +1,5 @@
 
-execute at @s run dash
+execute at @s run forwarddash
 execute at @s run scale set pehkui:falling 0 @s
 timedt 200 'execute at @s run scale set pehkui:falling 1 @s'
 
