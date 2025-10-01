@@ -12,5 +12,10 @@ execute at @s[tag=ender_artifact,tag=!cooldown] run function scr:items/end/ender
 
 execute at @s[tag=ender_amulet,tag=!cooldown] run function scr:items/end/amulet/ender_amulet_r
 
-execute at @s[tag=cloud_amulet,tag=!cooldown,scores={freeze=0}] run function scr:items/cloud/amulet/cloud_amulet
-execute at @s[tag=cloud_amulet,tag=!cooldown,scores={freeze=1}] run function scr:items/cloud/amulet/cloud_amulet_unfreeze
+execute at @s[tag=moon_amulet,tag=!cooldown] run function scr:items/moon/timestop
+
+execute at @s[tag=cloud_sword,tag=!cooldown] run function scr:items/cloud/cloud_sword
+
+execute at @s[tag=cloud_stick,tag=!cooldown] run function scr:items/cloud/cloud_stick
+
+execute at @s[tag=cloud_amulet,tag=!cooldown] run function scr:items/cloud/cloud_amulet

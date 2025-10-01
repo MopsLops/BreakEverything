@@ -10,18 +10,18 @@ scoreboard objectives add dist dummy
 gamerule keepInventory true
 gamerule doWeatherCycle false
 
-#Убрать(добавил что бы постоянно не прописывать)
-function scr:bind
-
 scoreboard objectives add used_bedrock used:bedrock
 
 scoreboard objectives add hurted minecraft.custom:minecraft.damage_taken
 
 scoreboard objectives add fall dummy
 
-scoreboard objectives add freeze dummy
+scoreboard objectives add timestop dummy
 
 scoreboard objectives add heal trigger
+
+scoreboard objectives add weathertoggle dummy
+scoreboard objectives add isRaining dummy
 
 team add enders
 team modify enders friendlyFire false

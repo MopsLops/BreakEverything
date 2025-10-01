@@ -118,9 +118,8 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run tag @s re
 #Амулет
 execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s add ender_amulet
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s remove ender_amulet
-
 #Партиклы
-execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run particle block minecraft:end_stone ~ ~1 ~ 1 1 1 0 10 force @s
+execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run particle block minecraft:purple_concrete ~ ~1 ~ 1 1 1 0 10 force @s
 #Эндермены не агрятся если игрок держит предметы
 execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run team join enders
 execute as @a[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run team join enders
@@ -133,10 +132,32 @@ execute as @a unless entity @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] un
 
 
 #Амулет
-execute as @a[nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run tag @s add cloud_amulet
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:white_dye"}}] at @s run tag @s remove cloud_amulet
-execute as @e[tag=frozen] run data merge entity @s {NoAI:1b,Motion:[0.0,0.0,0.0]}
-execute as @e[tag=!frozen] run data merge entity @s {NoAI:0b}
+execute as @a[nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run tag @s add moon_amulet
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:white_dye"}}] at @s run tag @s remove moon_amulet
+#Партиклы
+execute as @a[nbt={SelectedItem:{id:"minecraft:white_dye"}}] unless entity @s[scores={timestop=1..}] at @s run particle block minecraft:end_stone ~ ~1 ~ 1 1 1 0 10 force @s
+
+
+#ОБЛАЧНЫЕ ПРЕДМЕТЫ:
+#Меч
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:2}}}] at @s run tag @s add cloud_sword
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:2}}}] at @s run tag @s remove cloud_sword
+
+#Палка
+execute as @a[nbt={SelectedItem:{id:"minecraft:magenta_dye"}}] at @s run tag @s add cloud_stick
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:magenta_dye"}}] at @s run tag @s remove cloud_stick
+
+#Амулет
+execute as @a[nbt={SelectedItem:{id:"minecraft:gray_dye"}}] at @s run tag @s add cloud_amulet
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:gray_dye"}}] at @s run tag @s remove cloud_amulet
+# Если в мире дождь
+# если любой предикат true -> выставляем глобально 1, иначе 0
+execute if predicate scr:is_raining run scoreboard players set global isRaining 1
+execute unless predicate scr:is_raining run scoreboard players set global isRaining 0
+
+# скопировать значение глобального на всех игроков (если нужно, чтобы игроки видели свой score)
+execute as @a run scoreboard players operation @s isRaining = global isRaining
+
 
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0
