@@ -25,3 +25,8 @@ scoreboard objectives add isRaining dummy
 
 team add enders
 team modify enders friendlyFire false
+
+team add friend
+team modify friend friendlyFire false
+
+scoreboard objectives add mobs dummy

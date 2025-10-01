@@ -19,3 +19,5 @@ execute at @s[tag=cloud_sword,tag=!cooldown] run function scr:items/cloud/cloud_
 execute at @s[tag=cloud_stick,tag=!cooldown] run function scr:items/cloud/cloud_stick
 
 execute at @s[tag=cloud_amulet,tag=!cooldown] run function scr:items/cloud/cloud_amulet
+
+execute at @s[tag=spawn_pickaxe,tag=!cooldown] run function scr:items/spawn/spawn_pickaxe

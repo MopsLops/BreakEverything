@@ -119,12 +119,12 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run tag @s re
 execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s add ender_amulet
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s remove ender_amulet
 #Партиклы
-execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run particle block minecraft:purple_concrete ~ ~1 ~ 1 1 1 0 10 force @s
+execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run particle block minecraft:purple_concrete ~ ~1 ~ 1 1 1 0 1 force @s
 #Эндермены не агрятся если игрок держит предметы
 execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run team join enders
 execute as @a[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run team join enders
 execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run team join enders
-execute as @a unless entity @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] run team leave @s
+execute as @a unless entity @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] run team leave @s[team=enders]
 
 
 #ЛУННЫЕ ПРЕДМЕТЫ:
@@ -154,10 +154,30 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:gray_dye"}}] at @s run tag @s re
 # если любой предикат true -> выставляем глобально 1, иначе 0
 execute if predicate scr:is_raining run scoreboard players set global isRaining 1
 execute unless predicate scr:is_raining run scoreboard players set global isRaining 0
-
 # скопировать значение глобального на всех игроков (если нужно, чтобы игроки видели свой score)
 execute as @a run scoreboard players operation @s isRaining = global isRaining
 
+#СПАУНЕРСКИЕ ПРЕДМЕТЫ:
+#Меч
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:1}}}] at @s run tag @s add spawn_sword
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:1}}}] at @s run tag @s remove spawn_sword
+
+#Кирка
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:1}}}] at @s run tag @s add spawn_pickaxe
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:1}}}] at @s run tag @s remove spawn_pickaxe
+execute as @e[type=silverfish,tag=sf_burst] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy
+execute as @e[type=silverfish,tag=sf_burst] at @s run particle block minecraft:stone ~ ~ ~ 0.5 0.5 0.5 0.2 20
+execute as @e[type=silverfish,tag=sf_burst] at @s run playsound minecraft:block.stone.break block @a ~ ~ ~ 0.5 1
+
+#Амулет
+execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}}] at @s run tag @s add spawn_amulet
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:light_gray_dye"}}] at @s run tag @s remove spawn_amulet
+#Если игрок получает урон от ближайшего к нему моба призывается дружелюбный моб
+execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}},tag=spawn_amulet,scores={hurted=1..}] at @s run function scr:items/spawn/spawn_amulet
+execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}},tag=spawn_amulet] at @s run scoreboard players set @s[tag=spawn_amulet] hurted 0
+#Партиклы
+# execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}}] at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @s
+execute as @a run team join friend
 
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0
