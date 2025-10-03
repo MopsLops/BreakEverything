@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " # ",
+      "#|#",
+      " # "
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:yellow_dye"
+      },
+      "|": {
+          "item": "minecraft:gray_stained_glass"
+      }
+    },
+    "result": {
+      "item": "minecraft:white_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Амулет луны\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ПКМ -> Ты можешь управлять временем (останавливать и продолжать)\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Работает только в левой руке\",\"color\":\"white\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

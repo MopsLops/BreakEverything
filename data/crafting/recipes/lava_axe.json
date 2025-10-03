@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " ##",
+      " |#",
+      " | "
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:magma_block"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_axe",
+      "count": 1,
+      "data": {
+        "CustomModelData": 1,
+        "display": {
+          "Name": "[{\"text\":\"Лавовый топор\",\"color\":\"red\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"Если начинаешь ломать дерево,\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"оно моментально ломается и все блоки падают тебе\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

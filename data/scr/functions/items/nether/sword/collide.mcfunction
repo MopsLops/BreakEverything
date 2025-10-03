@@ -1,5 +1,5 @@
 tp @s ~ ~-255 ~
-kill @s
+particle minecraft:poof ~ ~ ~ .5 .5 .5 0.1 80
 
 
 # execute at @s run setblock ~ ~ ~ fire replace

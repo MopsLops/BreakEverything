@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "#|#",
+      "###"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:white_stained_glass"
+      },
+      "|": {
+          "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "minecraft:gray_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Облачный амулет\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ПКМ -> ты можешь управлять погодой\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Работает только в левой руке\",\"color\":\"white\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

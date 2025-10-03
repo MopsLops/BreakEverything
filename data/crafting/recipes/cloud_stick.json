@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#",
+      "#",
+      "#"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:white_stained_glass"
+      }
+    },
+    "result": {
+      "item": "minecraft:magenta_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Облачная палка\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ПКМ -> создает под тобой платформу которая тебя высоко подбрасывает\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

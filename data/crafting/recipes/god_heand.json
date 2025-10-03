@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "minecraft:pink_dye" },
+      { "item": "minecraft:red_dye" },
+      { "item": "minecraft:blue_dye" },
+      { "item": "minecraft:black_dye" },
+      { "item": "minecraft:orange_dye" },
+      { "item": "minecraft:lime_dye" },
+      { "item": "minecraft:white_dye" },
+      { "item": "minecraft:gray_dye" },
+      { "item": "minecraft:light_gray_dye" }
+    ],
+    "result": {
+      "item": "minecraft:light_blue_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Рука Бога\",\"color\":\"aqua\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"Все способности ранее созданных амулетов\",\"color\":\"gold\",\"italic\":false}]",
+            "[{\"text\":\"Пассивные:\",\"color\":\"dark_purple\",\"italic\":false}]",
+            "[{\"text\":\"Ты не горишь в лаве или огне, и если тебя ударят то противники поджигается\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Ты можешь находиться под водой сколько ты захочешь и не тонуть\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Теперь при падении с высоты у тебя под ногами ставиться платформа 3х3 блока\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Каждый раз когда тебя бьют мобы под тобой спавнится рандомный моб\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Работает только в левой руке\",\"color\":\"aqua\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

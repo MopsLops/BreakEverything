@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "#|#",
+      "###"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:spawner"
+      },
+      "|": {
+          "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "minecraft:light_gray_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Амулет спавна\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"Каждый раз когда тебя бьют мобы, под тобой спавнится рандомный дружелюбный моб\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Работает только в левой руке\",\"color\":\"white\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

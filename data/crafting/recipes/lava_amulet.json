@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#|#",
+    "###"
+  ],
+  "key": {
+    "#": {
+        "item": "minecraft:magma_block"
+    },
+    "|": {
+        "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "minecraft:red_dye",
+    "count": 1,
+    "data": {
+      "display": {
+        "Name": "[{\"text\":\"Лавовый амулет\",\"color\":\"red\",\"bold\":true,\"italic\":false}]",
+        "Lore": [
+          "[{\"text\":\"Ты не горишь в лаве или огне, и если тебя ударят то противники поджигается\",\"color\":\"gray\",\"italic\":false}]",
+          "[{\"text\":\"Работает только в левой руке\",\"color\":\"red\",\"italic\":false}]"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      " | ",
+      " | "
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:brown_dye"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_pickaxe",
+      "count": 1,
+      "data": {
+        "CustomModelData": 2,
+        "display": {
+          "Name": "[{\"text\":\"Адская Кирка\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"Держа киру - левая рука переплавяет предметы\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

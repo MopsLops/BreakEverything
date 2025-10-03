@@ -68,22 +68,18 @@ execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:blue_dye"}]}] at @s run 
 
 #БЕДРОКОВЫЕ ПРЕДМЕТЫ:
 #Бесконечный блок бедрока - потом сделаю что бы он был зачарованный
-execute as @a[nbt={SelectedItem:{id:"minecraft:bedrock",tag:{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'}}}}] run tag @s add infinite_bedrock
+execute as @a[nbt={SelectedItem:{id:"minecraft:bedrock",tag:{Tags:["infinite_bedrock"]}}}] run tag @s add infinite_bedrock
 execute as @a[tag=infinite_bedrock,scores={used_bedrock=1..}] at @s run item replace entity @s weapon.mainhand with air
-execute as @a[tag=infinite_bedrock,scores={used_bedrock=1..}] at @s run item replace entity @s weapon.mainhand with minecraft:bedrock{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'}}
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:bedrock",tag:{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'}}}}] run tag @s remove infinite_bedrock
+execute as @a[tag=infinite_bedrock,scores={used_bedrock=1..}] at @s run item replace entity @s weapon.mainhand with minecraft:bedrock{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'},Tags:["infinite_bedrock"]}
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:bedrock",tag:{Tags:["infinite_bedrock"]}}}] run tag @s remove infinite_bedrock
 scoreboard players reset @a[scores={used_bedrock=1..}] used_bedrock
 
 #Амулет
-#Я тут намудрил если что передалаю потом нормально
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=!bedrock_amulet] at @s run tag @s add bedrock_amulet
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet] at @s run tag @s remove bedrock_amulet
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet,scores={fall=20..}] at @s if block ~ ~-1 ~ air run tag @s add falling
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet] at @s[nbt={OnGround:0b}] run scoreboard players add @s fall 1
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]},tag=bedrock_amulet,scores={fall=20..}] at @s run scale set pehkui:falling 0 @s
-execute as @a[nbt={OnGround:1b}] at @s run execute at @s run scale set pehkui:falling 1 @s
-execute as @a[tag=falling,nbt={OnGround:0b}] run function scr:items/bedrock/bedrock_amulet
-execute as @a[nbt={OnGround:1b}] at @s run scoreboard players set @s fall 0
+execute as @a[tag=bedrock_amulet,nbt={OnGround:0b}] run scoreboard players add @s fall 1
+execute as @a[tag=bedrock_amulet,nbt={OnGround:0b},scores={fall=20..}] unless block ~ ~-1 ~ air run function scr:items/bedrock/bedrock_amulet
+execute as @a[nbt={OnGround:1b}] run scoreboard players set @s fall 0
 #Партиклы
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:black_dye"}]}] at @s run particle minecraft:ash ~ ~1 ~ 1 1 1 0 10 force @s
 
@@ -116,15 +112,15 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run tag @s add
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run tag @s remove ender_artifact
 
 #Амулет
-execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s add ender_amulet
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s remove ender_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:lime_dye"}]}] at @s run tag @s add ender_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:lime_dye"}]}] at @s run tag @s remove ender_amulet
 #Партиклы
-execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run particle block minecraft:purple_concrete ~ ~1 ~ 1 1 1 0 1 force @s
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:lime_dye"}]}] at @s run particle block minecraft:purple_concrete ~ ~1 ~ 1 1 1 0 1 force @s
 #Эндермены не агрятся если игрок держит предметы
-execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run team join enders
-execute as @a[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run team join enders
-execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run team join enders
-execute as @a unless entity @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] run team leave @s[team=enders]
+# execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run team join friend
+# execute as @a[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] at @s run team join friend
+# execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:lime_dye"}]}] at @s run team join friend
+# execute as @a unless entity @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] unless entity @s[nbt={SelectedItem:{id:"minecraft:cyan_dye"}}] unless entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:lime_dye"}]}] run team leave @s
 
 
 #ЛУННЫЕ ПРЕДМЕТЫ:
@@ -148,8 +144,8 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:magenta_dye"}}] at @s run tag @s 
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:magenta_dye"}}] at @s run tag @s remove cloud_stick
 
 #Амулет
-execute as @a[nbt={SelectedItem:{id:"minecraft:gray_dye"}}] at @s run tag @s add cloud_amulet
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:gray_dye"}}] at @s run tag @s remove cloud_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run tag @s add cloud_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run tag @s remove cloud_amulet
 # Если в мире дождь
 # если любой предикат true -> выставляем глобально 1, иначе 0
 execute if predicate scr:is_raining run scoreboard players set global isRaining 1
@@ -166,18 +162,25 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelD
 execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:1}}}] at @s run tag @s add spawn_pickaxe
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:1}}}] at @s run tag @s remove spawn_pickaxe
 execute as @e[type=silverfish,tag=sf_burst] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy
-execute as @e[type=silverfish,tag=sf_burst] at @s run particle block minecraft:stone ~ ~ ~ 0.5 0.5 0.5 0.2 20
-execute as @e[type=silverfish,tag=sf_burst] at @s run playsound minecraft:block.stone.break block @a ~ ~ ~ 0.5 1
 
 #Амулет
-execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}}] at @s run tag @s add spawn_amulet
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:light_gray_dye"}}] at @s run tag @s remove spawn_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]}] at @s run tag @s add spawn_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]}] at @s run tag @s remove spawn_amulet
 #Если игрок получает урон от ближайшего к нему моба призывается дружелюбный моб
-execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}},tag=spawn_amulet,scores={hurted=1..}] at @s run function scr:items/spawn/spawn_amulet
-execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}},tag=spawn_amulet] at @s run scoreboard players set @s[tag=spawn_amulet] hurted 0
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]},tag=spawn_amulet,scores={hurted=1..}] at @s run function scr:items/spawn/spawn_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]},tag=spawn_amulet] at @s run scoreboard players set @s[tag=spawn_amulet] hurted 0
 #Партиклы
 # execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}}] at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @s
 execute as @a run team join friend
+
+
+#РУКА БОГА
+#Все амулеты в одном
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=!god_heand] at @s run function scr:skills_button
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=god_heand] at @s run function scr:delbuttons
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=god_heand] at @s run tag @s remove god_heand
+execute as @a[tag=god_heand,nbt={OnGround:0b}] run scoreboard players add @s fall 1
+execute as @a[tag=god_heand,nbt={OnGround:0b},scores={fall=20..}] unless block ~ ~-1 ~ air run function scr:items/god_heand/bedrock_amulet
 
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " # ",
+      "#|#",
+      " # "
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:yellow_dye"
+      },
+      "|": {
+          "item": "minecraft:ender_pearl"
+      }
+    },
+    "result": {
+      "item": "minecraft:cyan_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Артефакт эндермена\",\"color\":\"dark_green\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ПКМ -> спавнит 3-х эндерменов которые будут тебя защищать\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "#|#",
+      "###"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:yellow_dye"
+      },
+      "|": {
+          "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "minecraft:lime_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Амулет Эндера\",\"color\":\"dark_green\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ЛКМ -> Ты можешь прыгать в энд и обратно без портала\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"ПКМ -> Тебя тепает как будто ты съел хорус\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Работает только в левой руке\",\"color\":\"dark_green\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

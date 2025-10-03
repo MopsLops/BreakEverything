@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      " | ",
+      " | "
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:spawner"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_pickaxe",
+      "count": 1,
+      "data": {
+        "CustomModelData": 1,
+        "display": {
+          "Name": "[{\"text\":\"Спавнушая кирка\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ПКМ -> спавнит 10 чешуйниц которые ломают все блоки вокруг тебя\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,49 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "# #",
+      "# #"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:bedrock"
+      }
+    },
+    "result": {
+      "item": "minecraft:leather_boots",
+      "count": 1,
+      "data": {
+        "HideFlags": 1,
+        "display": {
+          "Name": "[{\"text\":\"Бедроковые ботинки\",\"italic\":false,\"color\":\"gray\",\"bold\":true}]"
+        },
+        "Enchantments": [
+            {
+              "id": "minecraft:blast_protection",
+              "lvl": 40
+            },
+            {
+              "id": "minecraft:fire_protection",
+              "lvl": 40
+            },
+            {
+              "id": "minecraft:projectile_protection",
+              "lvl": 40
+            },
+            {
+              "id": "minecraft:protection",
+              "lvl": 40
+            },
+            {
+              "id": "minecraft:feather_falling",
+              "lvl": 40
+            },
+            {
+              "id": "minecraft:unbreaking",
+              "lvl": 999
+            }
+          ]
+      }
+    }
+  }
+  

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#",
+      "#",
+      "|"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:purple_stained_glass"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_sword",
+      "count": 1,
+      "data": {
+        "CustomModelData": 4,
+        "display": {
+          "Name": "[{\"text\":\"Воздушный меч\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"При ударе подкидывает сущности вверх\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

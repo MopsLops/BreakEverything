@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "#|#",
+      "###"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:blue_stained_glass"
+      },
+      "|": {
+          "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "minecraft:blue_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Амулет воды\",\"color\":\"dark_aqua\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"Ты можешь находиться под водой сколько ты захочешь и не тонуть\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Работает только в левой руке\",\"color\":\"dark_aqua\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
+  

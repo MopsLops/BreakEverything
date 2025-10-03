@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#",
+      "#",
+      "|"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:brown_dye"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_sword",
+      "count": 1,
+      "data": {
+        "CustomModelData": 3,
+        "display": {
+          "Name": "[{\"text\":\"Адский меч\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ПКМ -> оптравляет моба в ад\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

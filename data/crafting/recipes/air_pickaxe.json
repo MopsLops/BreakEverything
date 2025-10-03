@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      " | ",
+      " | "
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:purple_stained_glass"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_pickaxe",
+      "count": 1,
+      "data": {
+        "CustomModelData": 3,
+        "display": {
+          "Name": "[{\"text\":\"Воздушная кирка\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"Бурит туннель 4х4 на 20 блоков вперед\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

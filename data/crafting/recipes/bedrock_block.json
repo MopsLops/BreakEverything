@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:bedrock"
+      }
+    },
+    "result": {
+      "item": "minecraft:bedrock",
+      "count": 1,
+      "data": {
+      "Tags": ["infinite_bedrock"],
+      "HideFlags": 1,
+        "display": {
+          "Name": "[{\"text\":\"Бесконечный бедрок\",\"color\":\"gray\",\"bold\":true,\"italic\":false}]"
+        },
+        "Enchantments": [
+            {
+              "id": "minecraft:unbreaking",
+              "lvl": 999
+            }
+          ]
+      }
+    }
+  }
+  

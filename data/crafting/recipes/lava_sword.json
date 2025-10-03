@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#",
+      "#",
+      "|"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:magma_block"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_sword",
+      "count": 1,
+      "data": {
+        "CustomModelData": 5,
+        "display": {
+          "Name": "[{\"text\":\"Лавовый меч\",\"color\":\"red\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"При ударе поджигает противника и спавнит под ним источник лавы\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

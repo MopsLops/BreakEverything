@@ -16,7 +16,7 @@ give @a leather_chestplate{display:{Name:'["",{"text":"Бедроковый на
 give @a leather_leggings{display:{Name:'["",{"text":"Бедроковые поножи","italic":false,"bold":true,"color":"gray"}]'},Enchantments:[{lvl:40,id:blast_protection},{lvl:40,id:fire_protection},{lvl:40,id:projectile_protection},{lvl:40,id:protection},{lvl:9999,id:unbreaking}],HideFlags:1}
 give @a leather_boots{display:{Name:'["",{"text":"Бедроковые ботинки","italic":false,"bold":true,"color":"gray"}]'},Enchantments:[{lvl:40,id:blast_protection},{lvl:40,id:feather_falling},{lvl:40,id:fire_protection},{lvl:40,id:projectile_protection},{lvl:40,id:protection},{lvl:9999,id:unbreaking}],HideFlags:1}
 #Бесконечный бедрок
-give @a minecraft:bedrock{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'}}
+give @a minecraft:bedrock{display:{Name:'{"text":"Бесконечный бедрок","color":"gray","bold":true,"italic":false}'},Tags:["infinite_bedrock"]}
 #Адский меч (портальный)
 give @a minecraft:diamond_sword{CustomModelData: 3 }
 #Адская Кирка (лавовая-адская)

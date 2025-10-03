@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "#|#",
+      "###"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:bedrock"
+      },
+      "|": {
+          "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "minecraft:black_dye",
+      "count": 1,
+      "data": {
+        "display": {
+          "Name": "[{\"text\":\"Бедроковый Амулет\",\"color\":\"gray\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"При падении с высоты у тебя под ногами автоматически ставиться платформа 3х3 блока\",\"color\":\"gray\",\"italic\":false}]",
+            "[{\"text\":\"Работает только в левой руке\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

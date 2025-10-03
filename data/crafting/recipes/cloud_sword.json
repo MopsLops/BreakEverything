@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#",
+      "#",
+      "|"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:white_stained_glass"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_sword",
+      "count": 1,
+      "data": {
+        "CustomModelData": 2,
+        "display": {
+          "Name": "[{\"text\":\"Облачный меч\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"ПКМ -> ты можешь создавать торнадо из блоков и мобов\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }

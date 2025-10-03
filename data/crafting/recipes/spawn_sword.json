@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#",
+      "#",
+      "|"
+    ],
+    "key": {
+      "#": {
+          "item": "minecraft:spawner"
+      },
+      "|": {
+          "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_sword",
+      "count": 1,
+      "data": {
+        "CustomModelData": 1,
+        "display": {
+          "Name": "[{\"text\":\"Спавнуший меч\",\"color\":\"white\",\"bold\":true,\"italic\":false}]",
+          "Lore": [
+            "[{\"text\":\"Спавнит волка при ударе противника\",\"color\":\"gray\",\"italic\":false}]"
+          ]
+        }
+      }
+    }
+  }
