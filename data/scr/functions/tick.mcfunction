@@ -1,5 +1,11 @@
 #Сделал отдельную функцию под эффекты я незнаю почему они не хотят работать :/ если я вызываю функцию в чате то всё работае
 function scr:effects_tick
+execute as @a[tag=bedrock_amulet,nbt={OnGround:0b},scores={fall=18..}] unless block ~ ~-1 ~ air run scale set pehkui:falling 0 @s
+execute as @a[tag=god_heand,nbt={OnGround:0b},scores={fall=18..}] unless block ~ ~-1 ~ air run scale set pehkui:falling 0 @s
+
+execute as @a[nbt={OnGround:1b}] at @s run scale set pehkui:falling 1 @s
+
+execute as @e[tag=cloud_up,nbt={OnGround:1b}] at @s run damage @s 50 player_attack by @a[limit=1]
 
 #ВВОЗДУШНЫЕ ВЕЩИ:
 #Меч - сделал через attack.mcfunction
@@ -125,7 +131,8 @@ execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:lime_dye"}]}] at @s run 
 
 #ЛУННЫЕ ПРЕДМЕТЫ:
 #Нет луны, хочу реализовать через поломку блока
-
+execute as @a[scores={brokenMoonBlock=1..}] at @s run function scr:moon/moon_set
+scoreboard players reset @a[scores={brokenMoonBlock=1..}] brokenMoonBlock
 
 #Амулет
 execute as @a[nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run tag @s add moon_amulet
@@ -153,6 +160,10 @@ execute unless predicate scr:is_raining run scoreboard players set global isRain
 # скопировать значение глобального на всех игроков (если нужно, чтобы игроки видели свой score)
 execute as @a run scoreboard players operation @s isRaining = global isRaining
 
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run particle minecraft:cloud ~ ~1.5 ~ 0.5 0.3 0.5 0 5 force @s
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run particle minecraft:dripping_water ~ ~1 ~ 0.1 0.3 0.1 0.1 10 force @s
+
+
 #СПАУНЕРСКИЕ ПРЕДМЕТЫ:
 #Меч
 execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:1}}}] at @s run tag @s add spawn_sword
@@ -170,18 +181,18 @@ execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]}] at 
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]},tag=spawn_amulet,scores={hurted=1..}] at @s run function scr:items/spawn/spawn_amulet
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]},tag=spawn_amulet] at @s run scoreboard players set @s[tag=spawn_amulet] hurted 0
 #Партиклы
-# execute as @a[nbt={SelectedItem:{id:"minecraft:light_gray_dye"}}] at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0 1 force @s
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]}] at @s run particle block minecraft:spawner ~ ~1 ~ 1 1 1 0 10 force @s
 execute as @a run team join friend
 
 
 #РУКА БОГА
 #Все амулеты в одном
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=!god_heand] at @s run function scr:skills_button
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=god_heand] at @s run function scr:delbuttons
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=god_heand] at @s run tag @s remove god_heand
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=god_heand] at @s run function scr:delbuttons
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=god_heand] at @s run tag @s remove god_heand
 execute as @a[tag=god_heand,nbt={OnGround:0b}] run scoreboard players add @s fall 1
 execute as @a[tag=god_heand,nbt={OnGround:0b},scores={fall=20..}] unless block ~ ~-1 ~ air run function scr:items/god_heand/bedrock_amulet
-
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=!god_heand] at @s run particle block minecraft:enchanting_table ~ ~1 ~ 1 1 1 0 1 force @s
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0
 execute as @a[scores={click=1..}] at @s run scoreboard players set @s click 0

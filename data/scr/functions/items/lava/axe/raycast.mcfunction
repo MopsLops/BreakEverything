@@ -16,3 +16,9 @@ execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ i
 
 #если попал в какой-то блок определенный
 execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ oak_log run function scr:items/lava/axe/collide_block
+execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ spruce_log run function scr:items/lava/axe/collide_block
+execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ birch_log run function scr:items/lava/axe/collide_block
+execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ jungle_log run function scr:items/lava/axe/collide_block
+execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ acacia_log run function scr:items/lava/axe/collide_block
+execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ dark_oak_log run function scr:items/lava/axe/collide_block
+execute if score .distance dist matches ..200 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ mangrove_log run function scr:items/lava/axe/collide_block

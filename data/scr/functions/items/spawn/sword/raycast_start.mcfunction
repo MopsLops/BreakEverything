@@ -6,6 +6,8 @@ tag @s add raycasting
 #запуск рейкаста от лица игрока
 execute anchored eyes positioned ^ ^ ^ run function scr:items/spawn/sword/raycast
 
+playsound yourpack:custom.spawner.hum ambient @s ~ ~ ~ 1 1
+
 
 tag @s remove raycasting
 

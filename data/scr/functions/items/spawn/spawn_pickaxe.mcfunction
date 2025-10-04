@@ -1,3 +1,5 @@
+playsound yourpack:custom.spawner.hum ambient @s ~ ~ ~ 1 1
+
 execute at @s run summon silverfish ~1 ~ ~ {Tags:["sf_burst"]}
 execute at @s run summon silverfish ~-1 ~ ~ {Tags:["sf_burst"]}
 execute at @s run summon silverfish ~ ~ ~1 {Tags:["sf_burst"]}

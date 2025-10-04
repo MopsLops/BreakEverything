@@ -6,6 +6,8 @@ tag @s add raycasting
 #запуск рейкаста от лица игрока
 execute anchored eyes positioned ^ ^ ^ run function scr:items/water/hoe/raycast
 
+playsound minecraft:ambient.underwater.loop ambient @s ~ ~ ~ 1 1
+
 tag @s remove raycasting
 
 

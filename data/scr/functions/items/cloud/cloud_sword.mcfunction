@@ -1,3 +1,5 @@
+execute at @s run execute as @e[type=!player,type=!#scr:not_mob,distance=..7,sort=nearest] at @s run cparticle @a MagicTornade ~ ~.1 ~ 0 0 0 .3
+
 execute at @s run execute as @e[type=!player,type=!#scr:not_mob,distance=..7,sort=nearest] at @s run data merge entity @s {Motion:[0.0d,3.0d,0.0d]}
 execute at @s run execute as @e[type=!player,type=!#scr:not_mob,distance=..7,sort=nearest] at @s run tag @s add cloud_up
 

@@ -7,10 +7,10 @@
     ],
     "key": {
       "#": {
-          "item": "minecraft:yellow_dye"
+          "item": "minecraft:diamond"
       },
       "|": {
-          "item": "minecraft:gray_stained_glass"
+          "item": "minecraft:purple_dye"
       }
     },
     "result": {
