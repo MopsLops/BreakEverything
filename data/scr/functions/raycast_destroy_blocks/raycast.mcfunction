@@ -7,7 +7,7 @@ scoreboard players add .distance dist 1
 #particle minecraft:dust 0 0 0 0 ~ ~ ~ 0 0 0 0 0
 #particle minecraft:dust 0 0 0 0.05 ~ ~ ~ 0 0 0 0 1
 
-execute if score .distance dist matches ..1000 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ #scr:raycast_pass2 run function scr:raycast_destroy_blocks/raycast
+execute if score .distance dist matches ..1000 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ #scr:raycast_pass3 run function scr:raycast_destroy_blocks/raycast
 
 
 
