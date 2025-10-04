@@ -1,3 +1,3 @@
 gamerule doDaylightCycle false
 
-time set midnight
+time set day
