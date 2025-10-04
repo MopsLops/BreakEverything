@@ -7,6 +7,9 @@ execute as @a[nbt={OnGround:1b}] at @s run scale set pehkui:falling 1 @s
 
 execute as @e[tag=cloud_up,nbt={OnGround:1b}] at @s run damage @s 50 player_attack by @a[limit=1]
 
+execute as @a[tag=air] at @s run particle minecraft:end_rod ~ ~ ~ 1 1 1 0 10 force @s
+execute as @a[nbt={OnGround:1b}] at @s run tag @s remove air
+
 #ВВОЗДУШНЫЕ ВЕЩИ:
 #Меч - сделал через attack.mcfunction
 execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:4}}}] at @s run tag @s add air_sword
@@ -192,7 +195,7 @@ execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=god_heand] at @s run tag @s remove god_heand
 execute as @a[tag=god_heand,nbt={OnGround:0b}] run scoreboard players add @s fall 1
 execute as @a[tag=god_heand,nbt={OnGround:0b},scores={fall=20..}] unless block ~ ~-1 ~ air run function scr:items/god_heand/bedrock_amulet
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]},tag=!god_heand] at @s run particle block minecraft:enchanting_table ~ ~1 ~ 1 1 1 0 1 force @s
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_blue_dye"}]}] at @s run particle minecraft:enchanted_hit ~ ~1 ~ 1 1 1 0 1 force @s
 
 execute as @e[scores={shift=1..}] at @s run scoreboard players set @s shift 0
 execute as @a[scores={click=1..}] at @s run scoreboard players set @s click 0

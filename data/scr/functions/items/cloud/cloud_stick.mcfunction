@@ -1,6 +1,7 @@
-tag @s add air
+timedt 2 'tag @s add air'
 
 execute as @s at @s run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_wool
+
 execute at @s run bigdash
 timedt 5 'execute at @s run scale set pehkui:falling 0 @s'
 
