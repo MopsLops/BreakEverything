@@ -4,4 +4,6 @@ summon item ~ ~ ~ {Item:{id:yellow_dye,tag:{display:{Name:'["",{"text":"Блок
 
 particle block minecraft:black_concrete ~ ~ ~ 1 1 1 0 10
 
+playsound minecraft:block.glass.break player @s
+
 scoreboard players set .distance dist 1001
