@@ -3,7 +3,7 @@ function scr:effects_tick
 execute as @a[tag=bedrock_amulet,nbt={OnGround:0b},scores={fall=18..}] unless block ~ ~-1 ~ air run scale set pehkui:falling 0 @s
 execute as @a[tag=god_heand,nbt={OnGround:0b},scores={fall=18..}] unless block ~ ~-1 ~ air run scale set pehkui:falling 0 @s
 
-execute as @a[nbt={OnGround:1b}] at @s run scale set pehkui:falling 1 @s
+execute as @a[nbt={OnGround:1b},scores={fall=18..}] at @s run scale set pehkui:falling 1 @s
 
 execute as @e[tag=cloud_up,nbt={OnGround:1b}] at @s run damage @s 50 player_attack by @a[limit=1]
 
@@ -151,6 +151,7 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelD
 
 #Палка
 execute as @a[nbt={SelectedItem:{id:"minecraft:magenta_dye"}}] at @s run tag @s add cloud_stick
+execute as @a[tag=cloud_stick,nbt={OnGround:0b}] run scoreboard players add @s fall 1
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:magenta_dye"}}] at @s run tag @s remove cloud_stick
 
 #Амулет
