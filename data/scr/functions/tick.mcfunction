@@ -135,10 +135,10 @@ execute as @a[scores={brokenMoonBlock=1..}] at @s run function scr:moon/moon_set
 scoreboard players reset @a[scores={brokenMoonBlock=1..}] brokenMoonBlock
 
 #Амулет
-execute as @a[nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run tag @s add moon_amulet
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:white_dye"}}] at @s run tag @s remove moon_amulet
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:white_dye"}]}] at @s run tag @s add moon_amulet
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:white_dye"}]}] at @s run tag @s remove moon_amulet
 #Партиклы
-execute as @a[nbt={SelectedItem:{id:"minecraft:white_dye"}}] unless entity @s[scores={timestop=1..}] at @s run particle block minecraft:end_stone ~ ~1 ~ 1 1 1 0 10 force @s
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:white_dye"}]}] unless entity @s[scores={timestop=1..}] at @s run particle block minecraft:end_stone ~ ~1 ~ 1 1 1 0 10 force @s
 
 
 #ОБЛАЧНЫЕ ПРЕДМЕТЫ:
@@ -160,8 +160,8 @@ execute unless predicate scr:is_raining run scoreboard players set global isRain
 # скопировать значение глобального на всех игроков (если нужно, чтобы игроки видели свой score)
 execute as @a run scoreboard players operation @s isRaining = global isRaining
 
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run particle minecraft:cloud ~ ~1.5 ~ 0.5 0.3 0.5 0 5 force @s
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run particle minecraft:dripping_water ~ ~1 ~ 0.1 0.3 0.1 0.1 10 force @s
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run particle minecraft:cloud ~ ~3 ~ 1 0.3 1 0 3 force @s
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:gray_dye"}]}] at @s run particle minecraft:dripping_water ~ ~3 ~ 1 0.3 1 0.1 3 force @s
 
 
 #СПАУНЕРСКИЕ ПРЕДМЕТЫ:
