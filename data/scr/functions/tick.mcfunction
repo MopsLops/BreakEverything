@@ -10,6 +10,15 @@ execute as @e[tag=cloud_up,nbt={OnGround:1b}] at @s run damage @s 50 player_atta
 execute as @a[tag=air] at @s run particle minecraft:end_rod ~ ~ ~ 1 1 1 0 10 force @s
 execute as @a[nbt={OnGround:1b}] at @s run tag @s remove air
 
+#Замена вещей в инвентаре
+execute as @a if data entity @s Inventory[{id:"minecraft:orange_dye"}] run data modify entity @s Inventory[{id:"minecraft:orange_dye"}].tag.display set value {Name:'{"text":"Адский амулет","color":"dark_red","italic":false,"bold":true}',Lore:['{"text":"ПКМ -> Ты можешь прыгать в ад и обратно без портала","color":"gray","italic":false}','{"text":"Работает только в левой руке","color":"dark_red","italic":false}']}
+execute as @a if data entity @s Inventory[{id:"minecraft:light_gray_dye"}] run data modify entity @s Inventory[{id:"minecraft:light_gray_dye"}].tag.display set value {Name:'{"text":"Амулет спавна","color":"white","italic":false,"bold":true}',Lore:['{"text":"Каждый раз когда тебя бьют мобы, под тобой спавнится рандомный дружелюбный моб","color":"gray","italic":false}','{"text":"Работает только в левой руке","color":"white","italic":false}']}
+execute as @a if data entity @s Inventory[{id:"minecraft:green_dye"}] run data modify entity @s Inventory[{id:"minecraft:green_dye"}].tag.display set value {Name:'{"text":"Жемчужный посох","color":"white","italic":false,"bold":true}',Lore:['{"text":"ПКМ -> бесконечный эндер-пёрл","color":"gray","italic":false}']}
+execute as @a if data entity @s Inventory[{id:"minecraft:lime_dye"}] run data modify entity @s Inventory[{id:"minecraft:lime_dye"}].tag.display set value {Name:'{"text":"Амулет Эндера","color":"dark_green","italic":false,"bold":true}',Lore:['{"text":"ЛКМ -> Ты можешь прыгать в энд и обратно без портала","color":"gray","italic":false}','{"text":"ПКМ -> Тебя тепает как будто ты съел хорус","color":"gray","italic":false}','{"text":"Работает только в левой руке","color":"dark_green","italic":false}']}
+execute as @a if data entity @s Inventory[{id:"minecraft:cyan_dye"}] run data modify entity @s Inventory[{id:"minecraft:cyan_dye"}].tag.display set value {Name:'{"text":"Артефакт эндермена","color":"dark_green","italic":false,"bold":true}',Lore:['{"text":"ПКМ -> спавнит 3-х эндерменов которые будут тебя защищать","color":"gray","italic":false}']}
+execute as @a if data entity @s Inventory[{id:"minecraft:light_blue_dye"}] run data modify entity @s Inventory[{id:"minecraft:light_blue_dye"}].tag.display set value {Name:'{"text":"Рука Бога","color":"aqua","italic":false,"bold":true}',Lore:['{"text":"Все способности ранее созданных амулетов","color":"gold","italic":false}','{"text":"Пассивные:","color":"dark_purple","italic":false}','{"text":"Ты не горишь в лаве или огне, и если тебя ударят то противник поджигается","color":"gray","italic":false}','{"text":"Ты можешь находиться под водой сколько ты захочешь и не тонуть","color":"gray","italic":false}','{"text":"Теперь при падении с высоты у тебя под ногами ставиться платформа 3х3 блока","color":"gray","italic":false}','{"text":"Каждый раз когда тебя бьют мобы под тобой спавнится рандомный моб","color":"gray","italic":false}','{"text":"Работает только в левой руке","color":"aqua","italic":false}']}
+
+
 #ВВОЗДУШНЫЕ ВЕЩИ:
 #Меч - сделал через attack.mcfunction
 execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelData:4}}}] at @s run tag @s add air_sword
@@ -102,12 +111,14 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelD
 execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:2}}}] at @s run tag @s add nether_pickaxe
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:2}}}] at @s run tag @s remove nether_pickaxe
 #Если положить предмет в левую руку пока игрок держит кирку то он переплавляется:
-execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:2}}}] run item modify entity @s weapon.offhand scr:furnace
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:2}}},scores={offhand_flag=0}] run function scr:items/nether/nether_pickaxe
+execute as @a unless data entity @s Inventory[{Slot:-106b}] run scoreboard players set @s offhand_flag 0
 
 #Амулет
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=!nether_amulet] at @s run tag @s add nether_amulet
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]},tag=nether_amulet] at @s run tag @s remove nether_amulet
 #Партиклы
+
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:orange_dye"}]}] at @s run particle minecraft:soul_fire_flame ~ ~1 ~ 1 1 1 0 1 force @s
 
 
@@ -176,7 +187,7 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_sword",tag:{CustomModelD
 #Кирка
 execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:1}}}] at @s run tag @s add spawn_pickaxe
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:diamond_pickaxe",tag:{CustomModelData:1}}}] at @s run tag @s remove spawn_pickaxe
-execute as @e[type=silverfish,tag=sf_burst] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy
+execute as @e[type=silverfish,tag=sf_burst] at @s run fill ~ ~-1 ~ ~ ~ ~ air destroy
 
 #Амулет
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:light_gray_dye"}]}] at @s run tag @s add spawn_amulet

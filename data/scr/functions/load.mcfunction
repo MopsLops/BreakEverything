@@ -32,3 +32,5 @@ team modify friend friendlyFire false
 scoreboard objectives add mobs dummy
 
 scoreboard objectives add brokenMoonBlock minecraft.mined:minecraft.gray_stained_glass
+
+scoreboard objectives add offhand_flag dummy

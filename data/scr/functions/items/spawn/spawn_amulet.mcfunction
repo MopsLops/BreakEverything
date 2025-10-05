@@ -1,5 +1,7 @@
 scoreboard players add @s mobs 1
 
+playsound minecraft:block.sniffer_egg.crack ambient @s ~ ~ ~ 1 1
+
 execute if score @s mobs matches 0 run summon cow ~ ~ ~
 execute if score @s mobs matches 1 run summon pig ~ ~ ~
 execute if score @s mobs matches 2 run summon sheep ~ ~ ~
